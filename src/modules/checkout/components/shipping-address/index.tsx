@@ -104,7 +104,7 @@ const ShippingAddress = ({
           data-testid="shipping-last-name-input"
         />
         <Input
-          label="Address Line 1"
+          label="Address"
           name="shipping_address.address_1"
           autoComplete="address-line1"
           value={formData["shipping_address.address_1"]}
@@ -113,7 +113,7 @@ const ShippingAddress = ({
           data-testid="shipping-address-input"
         />
         <Input
-          label="Address Line 2"
+          label="Company"
           name="shipping_address.company"
           value={formData["shipping_address.company"]}
           onChange={handleChange}

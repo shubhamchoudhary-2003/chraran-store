@@ -14,12 +14,6 @@ export const paymentInfoMap: Record<
     title: "Credit card",
     icon: <CreditCard />,
   },
-
-  razorpay: {
-    title: "Razorpay",
-    icon: <CreditCard />,
-  },
-
   "stripe-ideal": {
     title: "iDeal",
     icon: <Ideal />,

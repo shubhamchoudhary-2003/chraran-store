@@ -46,7 +46,7 @@ const Item = ({ item, region, type = "full" }: ItemProps) => {
   }
 
   return (
-    <Table.Row className="w-full  bg-white" data-testid="product-row">
+    <Table.Row className="w-full" data-testid="product-row">
       <Table.Cell className="!pl-0 p-4 w-24">
         <LocalizedClientLink
           href={`/products/${handle}`}
@@ -59,20 +59,20 @@ const Item = ({ item, region, type = "full" }: ItemProps) => {
         </LocalizedClientLink>
       </Table.Cell>
 
-      <Table.Cell className="text-left bg-white">
-        <Text className="txt-medium-plus bg-white text-ui-fg-base" data-testid="product-title">{item.title}</Text>
+      <Table.Cell className="text-left">
+        <Text className="txt-medium-plus text-ui-fg-base" data-testid="product-title">{item.title}</Text>
         <LineItemOptions variant={item.variant} data-testid="product-variant" />
       </Table.Cell>
 
       {type === "full" && (
         <Table.Cell>
-          <div className="flex gap-2 items-center w-28 bg-white">
+          <div className="flex gap-2 items-center w-28">
             <DeleteButton id={item.id} data-testid="product-delete-button" />
             <CartItemSelect
               value={item.quantity}
               onChange={(value) => changeQuantity(parseInt(value.target.value))}
               className="w-14 h-10 p-4"
-              data-testid="product-select-button bg-white"
+              data-testid="product-select-button"
             >
               {Array.from(
                 {
@@ -92,7 +92,7 @@ const Item = ({ item, region, type = "full" }: ItemProps) => {
             </CartItemSelect>
             {updating && <Spinner />}
           </div>
-          <ErrorMessage error={error} data-testid="product-error-message  bg-white"  />
+          <ErrorMessage error={error} data-testid="product-error-message" />
         </Table.Cell>
       )}
 
@@ -105,12 +105,12 @@ const Item = ({ item, region, type = "full" }: ItemProps) => {
       <Table.Cell className="!pr-0">
         <span
           className={clx("!pr-0", {
-            "flex flex-col bg-white items-end h-full justify-center": type === "preview",
+            "flex flex-col items-end h-full justify-center": type === "preview",
           })}
         >
           {type === "preview" && (
             <span className="flex gap-x-1 ">
-              <Text className="text-ui-fg-mute  bg-whited">{item.quantity}x </Text>
+              <Text className="text-ui-fg-muted">{item.quantity}x </Text>
               <LineItemUnitPrice item={item} region={region} style="tight" />
             </span>
           )}

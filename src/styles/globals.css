@@ -2,7 +2,6 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-
 @layer utilities {
   /* Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
@@ -38,7 +37,7 @@
   select:-webkit-autofill:focus {
     border: 1px solid #212121;
     -webkit-text-fill-color: #212121;
-    -webkit-box-shadow: 0 0 0px 1000px #db7474 inset;
+    -webkit-box-shadow: 0 0 0px 1000px  #ffff inset;
     transition: background-color 5000s ease-in-out 0s;
   }
 
@@ -61,57 +60,69 @@
 
   .text-xsmall-regular {
     @apply text-[10px] leading-4 font-normal;
+    font-family: var(--font-playfair_display), serif;
   }
 
   .text-small-regular {
     @apply text-xs leading-5 font-normal;
+    font-family: var(--font-playfair_display), serif;
   }
 
   .text-small-semi {
     @apply text-xs leading-5 font-semibold;
+    font-family: var(--font-playfair_display), serif;
   }
 
   .text-base-regular {
     @apply text-sm leading-6 font-normal;
+    font-family: var(--font-playfair_display), serif;
   }
 
   .text-base-semi {
     @apply text-sm leading-6 font-semibold;
+    font-family: var(--font-playfair_display), serif;
   }
 
   .text-large-regular {
     @apply text-base leading-6 font-normal;
+    font-family: var(--font-playfair_display), serif;
   }
 
   .text-large-semi {
     @apply text-base leading-6 font-semibold;
+    font-family: var(--font-playfair_display), serif;
   }
 
   .text-xl-regular {
     @apply text-2xl leading-[36px] font-normal;
+    font-family: var(--font-playfair_display), serif;
   }
 
   .text-xl-semi {
     @apply text-2xl leading-[36px] font-semibold;
+    font-family: var(--font-playfair_display), serif;
   }
 
   .text-2xl-regular {
     @apply text-[30px] leading-[48px] font-normal;
+    font-family: var(--font-playfair_display), serif;
   }
 
   .text-2xl-semi {
     @apply text-[30px] leading-[48px] font-semibold;
+    font-family: var(--font-playfair_display), serif;
   }
 
   .text-3xl-regular {
     @apply text-[32px] leading-[44px] font-normal;
+    font-family: var(--font-playfair_display), serif;
   }
 
   .text-3xl-semi {
     @apply text-[32px] leading-[44px] font-semibold;
+    font-family: var(--font-playfair_display), serif;
   }
 }
-
 
 
 :root {
@@ -122,7 +133,7 @@ body {
   font-family: var(--font-cabin), serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6,p {
   font-family: var(--font-playfair_display), serif;
 }
 
@@ -135,7 +146,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .revolving-text {
   display: flex;
-  animation: scroll 15s linear infinite; /* Reduced duration for faster scrolling */
+  animation: scroll 10s linear infinite; /* Reduced duration for faster scrolling */
 }
 
 .revolving-text span {
